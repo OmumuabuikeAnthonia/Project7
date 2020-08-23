@@ -1,0 +1,18 @@
+﻿@using BamBoomhr.ViewModels
+@model JobTitlesListViewModel
+
+<div>
+    <h2>All jobTitles are shown here</h2>
+</div>
+
+<h2>@Model.CurrentCategory</h2>
+
+@{ 
+    foreach (var jobTitles in Model.JobTitles)
+    {
+        <div>
+            <h4>JobTitle Name: @jobTitles.Title</h4>
+            <p>Description: @jobTitles.Description</p>
+        </div>
+    }
+}
